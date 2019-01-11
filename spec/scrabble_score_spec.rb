@@ -20,4 +20,9 @@ describe ScrabbleScore do
   it "returns 1" do
     expect(ScrabbleScore.scrabble_test("a")).to eql(1)
   end
+
+  context "given \"f\""
+  it "returns 4" do
+    expect(ScrabbleScore.scrabble_test("f")).to eql(4)
+  end
 end
