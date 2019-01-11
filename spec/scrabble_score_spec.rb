@@ -5,4 +5,10 @@ describe ScrabbleScore do
   it "returns 0" do
     expect(ScrabbleScore.scrabble_test("")).to eql(0)
   end
+
+  context "given a space"
+  it "returns 0" do
+    expect(ScrabbleScore.scrabble_test(" ")).to eql(0)
+  end
+
 end
