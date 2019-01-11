@@ -15,4 +15,9 @@ describe ScrabbleScore do
   it "returns 0" do
     expect(ScrabbleScore.scrabble_test(nil)).to eql(0)
   end
+
+  context "given \"a\""
+  it "returns 1" do
+    expect(ScrabbleScore.scrabble_test("a")).to eql(1)
+  end
 end
