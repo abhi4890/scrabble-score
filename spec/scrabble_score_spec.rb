@@ -35,4 +35,9 @@ describe ScrabbleScore do
   it "returns 41" do
     expect(ScrabbleScore.scrabble_test("OXYPHENBUTAZONE")).to eql(41)
   end
+
+  context "given \"alarcity\""
+  it "returns 13" do
+    expect(ScrabbleScore.scrabble_test("alarcity")).to eql(13)
+  end
 end

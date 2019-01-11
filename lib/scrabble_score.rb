@@ -3,19 +3,21 @@ class ScrabbleScore
     if string == nil
       0
     else
-    string=string.downcase
-      if string == "oxyphenbutazone"
-        41
-      elsif string == "street"
-        6
-      elsif string == "a"
-        1
-      elsif string == "f"
-        4
-      else
-        0
+      string =string.downcase
+    letter_score={
+        /[aeioulnrst]/ => 1,
+        /[dg]/ => 2,
+        /[bcmp]/ => 3,
+        /[fhvmy]/ => 4,
+        /[k]/ => 5,
+        /[jx]/ => 8,
+        /[qz]/ => 10
+    }
+      word_score = 0
+      letter_score.each do |letter , value|
+        word_score += string.scan(letter).count * value
       end
-    end
-
+      word_score
+  end
   end
 end
