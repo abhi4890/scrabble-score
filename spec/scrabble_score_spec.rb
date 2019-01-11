@@ -25,4 +25,9 @@ describe ScrabbleScore do
   it "returns 4" do
     expect(ScrabbleScore.scrabble_test("f")).to eql(4)
   end
+
+  context "given \"street\""
+  it "returns 6" do
+    expect(ScrabbleScore.scrabble_test("street")).to eql(6)
+  end
 end
